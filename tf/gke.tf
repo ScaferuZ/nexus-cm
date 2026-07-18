@@ -4,7 +4,7 @@ resource "google_container_cluster" "nexus" {
   location = var.zone
 
   network    = google_compute_network.nexus.id
-  subnetwork = google_compute_network.nexus.id
+  subnetwork = google_compute_subnetwork.nexus.id
 
   networking_mode = "VPC_NATIVE"
 

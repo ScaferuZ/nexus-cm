@@ -5,11 +5,11 @@ output "project_id" {
 
 output "project_number" {
   description = "Numeric GCP project identifier"
-  value       = data.google_project.current
+  value       = data.google_project.current.number
 }
 
 output "cluster_name" {
-  description = "Numeric GCP project identifier"
+  description = "Name of the GKE cluster"
   value       = google_container_cluster.nexus.name
 }
 
