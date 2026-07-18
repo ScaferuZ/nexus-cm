@@ -1,0 +1,15 @@
+# Terraform working directory and local state
+tf/**/.terraform/*
+tf/*.tfstate
+tf/*.tfstate.*
+tf/*.tfplan
+tf/crash.log
+tf/crash.*.log
+
+# Local variable files
+tf/terraform.tfvars
+tf/*.auto.tfvars
+
+# Terraform CLI configuration
+tf/.terraformrc
+tf/terraform.rc
