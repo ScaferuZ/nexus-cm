@@ -1,0 +1,46 @@
+replicaCount: 1
+
+image:
+  repository: sonatype/nexus3
+  tag: "3.94.0"
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: true
+  name: ""
+  annotations: {}
+
+service: 
+  type: ClusterIP
+  port: 8081 
+
+persistence:
+  enabled: true
+  storageClassName: ""
+  accessMode: ReadWriteOnce
+  size: 20Gi
+
+resources:
+  requests:
+    cpu: 500m
+    memory: 2Gi
+  limits:
+    cpu: "1"
+    memory: 3Gi
+
+nexus:
+  gcpRegion: asia-southeast1
+  javaMemory: 1200m
+
+podSecurityContext:
+  fsGroup: 200
+  fsGroupChangePolicy: OnRootMismatch
+
+containerSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 200
+  runAsGroup: 200
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop:
+      - ALL

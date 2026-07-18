@@ -1,0 +1,6 @@
+apiVersion: v2
+name: nexus
+description: Sonatype Nexus Repo w Google Cloud blob-store suppport
+type: application
+version: 0.1.0
+appVersion: "3.94.0"
