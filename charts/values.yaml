@@ -7,8 +7,9 @@ image:
 
 serviceAccount:
   create: true
-  name: ""
-  annotations: {}
+  name: "nexus"
+  annotations: 
+    iam.gke.io/gcp-service-account: nexus-gcs@nexus-502804.iam.gserviceaccount.com
 
 service: 
   type: ClusterIP
