@@ -49,8 +49,3 @@ output "nexus_workload_identity_annotation" {
   description = "Annotation required on the Nexus Kubernetes ServiceAccount"
   value       = google_service_account.nexus.email
 }
-
-output "artifact_registry_repository" {
-  description = "Docker repository used for the custom Nexus image"
-  value       = google_artifact_registry_repository.nexus.name
-}

@@ -20,7 +20,7 @@ resource "google_service_account" "nexus" {
   depends_on = [google_project_service.required["iam.googleapis.com"]]
 }
 
-resource "google_storage_bucket_iam_memebr" "nexus_storage_admin" {
+resource "google_storage_bucket_iam_member" "nexus_storage_admin" {
   bucket = google_storage_bucket.nexus.name
   role   = "roles/storage.admin"
   member = "serviceAccount:${google_service_account.nexus.email}"
