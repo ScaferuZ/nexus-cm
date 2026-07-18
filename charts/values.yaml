@@ -23,15 +23,15 @@ persistence:
 
 resources:
   requests:
-    cpu: 500m
-    memory: 2Gi
+    cpu: 50m
+    memory: 1Gi
   limits:
-    cpu: "1"
-    memory: 3Gi
+    cpu: 750m
+    memory: 2300Mi
 
 nexus:
   gcpRegion: asia-southeast1
-  javaMemory: 1200m
+  javaMemory: 768m
 
 podSecurityContext:
   fsGroup: 200
